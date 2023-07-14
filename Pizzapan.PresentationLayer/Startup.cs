@@ -37,6 +37,9 @@ namespace Pizzapan.PresentationLayer
 
             services.AddScoped<IContactService, ContactManager>();
             services.AddScoped<IContactDal, EfContactDal>();
+
+            services.AddScoped<IDiscountService, DiscountManager>();
+            services.AddScoped<IDiscountDal, EfDiscountDal>();
             services.AddControllersWithViews();
         }
 
