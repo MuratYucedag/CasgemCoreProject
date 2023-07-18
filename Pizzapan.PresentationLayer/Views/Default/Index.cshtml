@@ -14,56 +14,7 @@ Author URL: http://w3layouts.com
 
 <body>
     <!--header-->
-    <div class="w3l-top-header">
-        <header id="site-header" class="fixed-top">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-dark stroke">
-                    <a class="navbar-brand" href="index.html">
-                        <span class="fa fa-pie-chart"></span> Pizza pan
-                    </a>
-                    <!-- if logo is image enable this
-                    <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                    </a> -->
-                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                        </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item @@index-active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item @@about-active">
-                                <a class="nav-link effect-3" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item @@services-active">
-                                <a class="nav-link effect-3" href="services.html">Menu</a>
-                            </li>
-                            <li class="nav-item @@contact-active">
-                                <a class="nav-link effect-3" href="contact.html">Contact</a>
-                            </li>
-                            <li class="px-4 fill-none">
-                                <a href="#url" class="btn btn-style btn-secondary">Online Order</a>
-                            </li>
-                        </ul>
-                        <div class="popup">
-                            <a href="#domain" class="domain" data-toggle="modal" data-target="#DomainModal">
-                                <div class="hamburger1">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </div>
+   @await Component.InvokeAsync("_NavbarPartial")
     <!--/header-->
     <!-- Domain Modal -->
     <div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
@@ -124,27 +75,7 @@ Author URL: http://w3layouts.com
         <!-- //modal-dialog -->
     </div>
     <!-- //Domain modal -->
-    <section class="w3l-banner" id="banner">
-        <div class="new-block py-5">
-            <div class="container">
-                <div class="row middle-section">
-                    <div class="col-lg-7 section-width align-self">
-                        <h5>Eat pizza everyday</h5>
-                        <h2>Share your love for pizza</h2>
-                        <a href="#url" class="btn btn-secondary btn-outline-style mt-md-5 mt-4">
-                            <span class="fa fa-shopping-cart mr-2"></span> Order Online
-                        </a>
-                    </div>
-                    <div class="col-lg-5 history-info mt-lg-0 mt-5 pt-lg-0 pt-md-4">
-                        <img src="assets/images/pizza-full.png" class="img-fluid" alt="image">
-                        <div class="cost">
-                            <h5>Only</h5>
-                            <h3>$25</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
+    @await Component.InvokeAsync("_FeaturePartial")
     <!-- iphone home block -->
     <section class="w3l-about py-5">
         <div class="container py-lg-5 py-md-4">
